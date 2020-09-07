@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<head th:insert="maimai/common/layout :: head">
+
+    <!-- TODO get title name by controller-->
+    <titel th:replace="maimai_ext/title_ext :: top"></titel>
+
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <div th:replace="maimai_ext/layout_ext :: header('welcome to top page')"></div>
+
+    <!-- Contents -->
+    <div class="container-md px-5">
+        <!-- Stepbar   -->
+        <div th:replace="maimai_ext/layout_ext :: stepbar"></div>
+
+        <div class="">
+            <form>
+
+
+                <hr>
+
+                <div class="form-group row justify-content-center">
+                    <label class="col col-md-3" for="inputLastName" th:insert="labels :: label1">Last name</label>
+                    <span class="col col-md-6">
+                        <input class="form-control"type="text"id="inputLastName" aria-describedby="emailHelp"
+                               placeholder="Last Name">
+                        <small id="lastNameErrorMessage" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </span>
+                </div>
+
+                <div class="form-group row justify-content-center">
+                    <label class="col col-md-3" for="inputFirstName" th:insert="labels_ext :: label2">First name</label>
+                    <span class="col col-md-6">
+                        <input type="text" class="form-control" id="inputFirstName" placeholder="First name">
+                        <small id="firstNameErrorMessage" class="form-text text-muted">Show password error massage.</small>
+                    </span>
+                </div>
+
+                <div class="form-group form-check row justify-content-center">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1" th:insert="labels_2 :: label3">Check me out</label>
+                </div>
+
+                <div class="row justify-content-center">
+                    <button type="submit" class="col-auto btn btn-primary text-center">Submit</button>
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+
+    <!-- Page Footer -->
+    <footer th:replace="maimai_ext/layout_ext::footer"></footer>
+
+
+</body>
+</html>

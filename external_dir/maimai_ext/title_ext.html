@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- page title replace  -->
+    <title th:fragment="top">トップページ</title>
+    <title th:fragment="input-page-1">入力画面１</title>
+    <title th:fragment="input-page-2">入力画面２</title>
+    <title th:fragment="confirmation-page">確認画面</title>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <div th:fragment="header">
+        <h4 class="text-center">Header</h4>
+        <hr>
+    </div>
+
+    <!-- Page Footer -->
+    <footer th:fragment="footer" class="blockquote-footer">
+        Someone famous in
+        <cite title="Source Title">
+            Source Title
+        </cite>
+    </footer>
+
+</body>
+
+

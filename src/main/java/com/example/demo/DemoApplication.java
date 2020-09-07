@@ -31,7 +31,8 @@ public class DemoApplication {
 	@Bean
 	public FileTemplateResolver  thirdTemplateResolver() {
 		FileTemplateResolver  thirdTemplateResolver = new FileTemplateResolver ();
-		thirdTemplateResolver.setPrefix("C:\\Users\\shint\\work\\spring-boot-sample\\external_dir\\");
+//		thirdTemplateResolver.setPrefix("C:\\Users\\shint\\work\\spring-boot-sample\\external_dir\\");
+		thirdTemplateResolver.setPrefix("C:\\Users\\sayori\\IdeaProjects\\spring-boot-template-sample\\external_dir\\");
 		thirdTemplateResolver.setSuffix(".html");
 		thirdTemplateResolver.setTemplateMode(TemplateMode.HTML);
 		thirdTemplateResolver.setCharacterEncoding("UTF-8");

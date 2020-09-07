@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+        <!-- page title replace  -->
+        <title th:replace="maimai_ext/title_ext::${title}">
+            replace title
+        </title>
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <div th:fragment="header(page)" class="text-center">
+        <h4 class="pt-2">Header</h4>
+        <p th:text="${page}">page title</p>
+        <hr>
+    </div>
+
+    <!-- Stepbar -->
+    <ul th:fragment="stepbar" class="nav nav-pills nav-justified">
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Step 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Step 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Step 3</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Step 4</a>
+        </li>
+    </ul>
+
+    <!-- Page Footer -->
+    <footer th:fragment="footer" class="footer mt-auto py-3">
+        <div class="container">
+            <span class="text-muted">Place sticky footer content here.</span>
+        </div>
+    </footer>
+
+
+
+</body>
+
+
