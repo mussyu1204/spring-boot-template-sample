@@ -22,12 +22,12 @@
 
             <hr>
 
-            <form action="/complete" method="post" th:action="@{/complete}" th:object="${Hoge}">
+            <form action="/complete" method="post" th:action="@{/complete}" th:object="${hoge}">
                 <!-- Input Last Name -->
                 <div class="form-group row justify-content-center">
                     <label class="col-12 col-md-3 text-right" for="inputLastName" th:insert="maimai_ext/labels_ext :: lastName">Last name</label>
                     <span class="col-12 col-md-6">
-                        <input class="form-control" type="text" id="inputLastName" name="lastName" placeholder="Last Name">
+                        <input class="form-control" type="text" id="inputLastName" th:field="*{lastName}" placeholder="Last Name" >
                         <small id="lastNameErrorMessage" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </span>
                 </div>
@@ -36,7 +36,7 @@
                 <div class="form-group row justify-content-center">
                     <label class="col col-md-3 text-right" for="inputFirstName" th:insert="maimai_ext/labels_ext :: firstName">First name</label>
                     <span class="col col-md-6">
-                        <input class="form-control" type="text" id="inputFirstName" name="firstName" placeholder="First name">
+                        <input class="form-control" type="text" id="inputFirstName" th:field="*{firstName}" placeholder="First name">
                         <small id="firstNameErrorMessage" class="form-text text-muted">Show password error massage.</small>
                     </span>
                 </div>
