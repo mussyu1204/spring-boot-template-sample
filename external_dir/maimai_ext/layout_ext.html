@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+<head>
 
-<head th:fragment="head(title)">
-    <meta charset="UTF-8">
-        <!-- page title replace  -->
-        <title th:replace="maimai_ext/title_ext::${title}">
-            replace title
-        </title>
 </head>
 
 <body>
 
     <!-- Page Header -->
-    <div th:fragment="header(page)" class="text-center">
+    <div th:fragment="header(subtitle)" class="text-center">
         <h4 class="pt-2">Header</h4>
-        <p th:text="${page}">page title</p>
+        <th:block th:switch="${subtitle}">
+            <p th:case="${subtitle}?'top'">welcome to top page..</p>
+            <p th:case="*">complete..</p>
+        </th:block>
         <hr>
     </div>
 

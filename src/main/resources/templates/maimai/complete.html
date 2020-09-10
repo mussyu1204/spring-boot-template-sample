@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ja">
+<!-- TODO get title name by controller-->
+<head th:insert="maimai/common/layout :: head('top')">
+
+</head>
+
+<body>
+
+    <!-- Page Header -->
+    <div th:replace="maimai_ext/layout_ext :: header('complete')"></div>
+
+    <!-- Contents -->
+    <div class="container-md px-5">
+        <!-- Stepbar   -->
+        <div th:replace="maimai_ext/layout_ext :: stepbar"></div>
+
+
+        <div class="">
+
+            <h3 class="font-weight-bold pt-3 pl-3 col-lg-10 offset-lg-1">完了画面</h3>
+
+            <hr>
+
+            <p class="text-center">登録完了したよ！</p>
+            <a href="/select" class="btn btn-outline-primary">確認用ボタン</a>
+
+        </div>
+
+    </div>
+
+    <!-- Page Footer -->
+    <footer th:replace="maimai_ext/layout_ext::footer"></footer>
+
+
+</body>
+</html>
